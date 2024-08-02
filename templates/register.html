@@ -1,0 +1,23 @@
+<html>
+    <head>
+        <title>Register</title>
+    </head>
+    <body style="background-image:url('/static/images/back2.jpeg'); background-size:cover;">
+        <div style="width:350px;height:550px;border:2px solid white;position:absolute;left:10px;top:40px;color:white;font-size:20px;"><center>
+        <h2 style="color:yellow;">NEW REGISTRATION</H2>
+            <form method="POST">
+            {% csrf_token %}
+            {{ form.as_p }}
+            <input type="submit" value="Register" style="width:80px;height:30px;background-color:blue;color:white;font-weight:bold;">
+        </form>
+        <button style="width:100px;height:30px;background-color:blue;">
+            <a href="{% url 'login'%}" style="
+               color:white;width:80px;height:30px;text-decoration:none;font-size:14px;">Login</a></button>
+    </center>
+</div>
+<div style="color:white;width:300px;height:300px;font-size:40px;position:absolute;left:750px;top:200px;">“Eat 
+    Breakfast Like A King, Lunch Like A Prince And Dinner Like A Pauper.” <br><p style="font-size:20px;">
+        – Adelle Davis, Author And Nutritionist</p>
+</div>
+    </body>
+    </html>

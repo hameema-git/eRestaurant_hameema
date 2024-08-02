@@ -1,0 +1,24 @@
+{% extends 'base.html'%}
+{% load static %}
+{% block content %}
+<i><a class="navbar-brand" href="#" style="position:absolute;left:550px;bottom:520px;font-size:40px;
+    font-weight:bold;color:saddlebrown;">OUR MENU</a></i>
+
+<div class="container text-center" style="padding-top:30px;padding-bottom:10px;justify-content:space-between;
+width:1000px;height:550px;">
+    {% for i in  cat %}
+        <div class="card" style="width: 270px; height:200px;display:inline-block;" >
+        <img src="{{i.c_images.url}}" class="card-img-top" style="height:100px;width:100px;position:relative;right:70px;" alt="...">
+        <div class="card-body" style="position:relative;bottom:70px;left:45px;" >
+        <h5 class="card-title" >{{i.c_name}}</h5>
+        <p  style="font-size:15px;"class="card-text">{{i.discription}}</p>
+        <a href="{% url 'food_list_by_category' c_name_slug=i.slug %}" class="btn btn-primary" style="position:relative; right:75px;">view more-></a>
+       
+              
+            </div>
+        
+        </div>
+    {% endfor %}
+      </div>
+    
+    {% endblock %}

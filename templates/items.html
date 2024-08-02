@@ -1,0 +1,29 @@
+{% extends 'base.html'%}
+{% block title %}items{% endblock %}
+{% block content %}
+{% load static %}
+<img src="{% static '/images/menulogo1.png' %}" style="width:30px;height:30px;position:absolute;left:1054px;bottom:518px;">
+<a class="navbar-brand" href="{% url 'pg2'%}"  style="position:absolute;left:1100px;
+bottom:520px;font-weight:bold;font-size:22px;font-weight:bold">MENU</a>
+                  
+
+{% if category %}    
+   
+    <h2 style="position:absolute; left:450px;bottom:500px;font-weight:bold;color:saddlebrown;">{{ category.c_name}}</h2>      
+{% endif %} 
+<div style="width:800px;height:500px;position:absolute;left:100px;top:150px;">
+{% for i in foods %}
+    <div class="card" style="width: 18rem;height:200px;display:inline-block; justify-content:space-evenly;">
+        <img  class="prodimg" src="{% if i.f_image %}{{i.f_image.url}}{% else %} 
+        {% static 'img/default_product.jpg' %}{% endif %}" class="card-img-top" alt="{{ i.name }} Image" style="width:100px;height:100px;">
+        <div class="card-body" style="position:absolute;left:100px;bottom:10px;">
+        <h5 class="card-title">{{i.food_name}}</h5>
+        <p class="card-text">Price: {{i.price}}</p>
+        <p class="card=text">Rating: {{i.rating}}</p>
+        <a href="{% url 'pg8'%}" class="btn btn-primary">ORDER NOW</a>
+        </div>
+    </div>
+
+{% endfor %}
+</div>
+{% endblock %}

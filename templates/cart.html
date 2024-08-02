@@ -1,0 +1,13 @@
+{% extends 'base.html'%}
+{% block title %}items{% endblock %}
+{% block content %}
+{% load static %}
+<body style="background-color:gray;"><center><div style="width:300px;height:150px;background-color:saddlebrown;position:absolute;
+    left:500px;top:200px;border:2px solid black; border-radius:10px;">
+    <h4 style="color:white;">Order successfull<h4>
+        <img src="{% static '/images/tick.png' %}" style="width:30px;height:30px;">
+    <button style="width:80px;background-color:gray;position:absolute;top:80px;right:100px;
+    border:2px solid black;border-radius:10px;"><a href="{% url 'pg2' %}" style="text-decoration:none;color:white;">OK</a></button>
+    </div></center>
+    </body> 
+{% endblock %}

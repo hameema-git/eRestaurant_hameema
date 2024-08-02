@@ -1,0 +1,14 @@
+{% extends 'base.html' %}
+{% block content %}
+<center><h1 style="position:absolute;bottom:500px;left:580px;">Review</h1> </center>
+<div style="width:300px;position:absolute;left:500px;">
+<form action="" method="POST">
+    {% csrf_token %}
+   <center><label style="font-weight:bold;"> Name:</label></center> <input type="text" name="name"  style="height:50px;width:300px;"><br><br>
+   <center><label style="font-weight:bold;"> Place:</label></center><input type="text" name="place"  style="height:50px;width:300px;"><br><br>
+   <center><label style="font-weight:bold;"> Rating: </label></center><input type="number" name="rating"  style="height:50px;width:300px;"><br><br>
+   <center><label style="font-weight:bold;"> Comment: </label></center><input type="textarea" name="comment" style="height:100px;width:300px;"><br><br>
+   <center> <button type="submit" style="background-color:saddlebrown;color:white;font-weight:bold;">SUBMIT</button></center>
+</form>
+</div>
+{% endblock %}

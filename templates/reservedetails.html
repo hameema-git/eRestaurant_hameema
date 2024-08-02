@@ -1,0 +1,23 @@
+{% extends 'base.html'%}
+{% block title %}reserve{% endblock %}
+{% block content %}
+{% load static %}
+<center><h2 style="position:absolute;left:590px;bottom:500px;">Fill Details</h2>
+<div style="width:350px;height:350px;background-color:saddlebrown;color:white;
+border:2px solid black;border-radius:20px;position:absolute;top:180px;left:490px;">
+<center>
+<form action="" method="POST" style="position:absolute;top:30px;left:35px;font-weight:bold;">
+    {% csrf_token %}
+    
+Name: <input type="text" name='name'><br><br>
+Phone No :<input type="text" name='phone'><br><br>
+Date :<input type='date' name="date" placeholder="yyyy-mm-dd"><br><br>
+Time: <input type="text" name="time" placeholder="hh.mm.ss"><br><br>
+No. of quest: <input type="number" name='nq' style="width:60px;"><br><br>
+<button type="submit" style="background-color:gray;color:white;">SUBMIT</button>
+<button type="reset" style="background-color:gray;color:white;">RESET</button>
+</form> 
+</center>
+</div>
+</center>
+{% endblock %}

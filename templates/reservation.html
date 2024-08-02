@@ -1,0 +1,20 @@
+{% extends 'base.html'%}
+{% block title %}reserve{% endblock %}
+{% block content %}
+{% load static %}
+<h3 style="position:absolute;left:450px;bottom:500px;">Check Availability</h3>
+<div style="width:500px;height:200px;background-color:saddlebrown;color:white;border:2px solid black;
+border-radius:20px;position:absolute;top:200px;left:380px;">
+<center><h4 style="position:absolute;top:10px;left:30px;">Number Of 4 Seater Tables Available:
+   
+{% for i in res %}
+
+   {{i.seats}}
+
+{% endfor %}
+</h4>
+<div style="width:140px;height:40px;background-color:gray;position:absolute;left:180px;bottom:80px;
+border:2px solid black;border-radius:10px;">
+<a class="navbar-brand" href="{% url 'pg6'%}" style="font-weight:bold;font-size:20px;">Reserve Seats</a></center>
+</div>
+{% endblock %}

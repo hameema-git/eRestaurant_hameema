@@ -1,0 +1,25 @@
+{% extends 'base.html'%}
+{% load static %}
+{% block content %}
+<a class="navbar-brand" href="{% url 'pg4'%}"  style="position:absolute;left:200px;bottom:525px;
+font-weight:bold;font-size:20px;">ADD REVIEW</a>
+{% for i in rev %}
+<div style="width:300px;height:150px;background-color:saddlebrown;color:white;
+border:2px solid black;display:inline-block;position:relative;left:40px;top:40px;">
+<center>
+<h4>{{i.name}}</h4>
+<h5>{{i.place}}</h5>
+<h6>"{{i.comments}}"</h6>
+Rating: 
+{{i.rating}}.0
+
+{% comment %} {% for i in  n %}
+<img src="{% static '/images/star.png' %}" style="width:50px;height:50px;">
+{% endfor %} {% endcomment %}
+{% comment %} {% for i in range(n) %}
+
+{% endfor %} {% endcomment %}
+</center>
+</div>
+{% endfor %}
+{% endblock %}

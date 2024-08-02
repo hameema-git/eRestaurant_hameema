@@ -1,0 +1,17 @@
+{% extends 'base.html'%}
+{% block title %}reserve{% endblock %}
+{% block content %}
+{% load static %}
+<div style="width:500px;height:200px;background-color:saddlebrown;color:white;
+border:2px solid black;border-radius:20px;position:absolute;top:200px;left:380px;">
+<center>
+<form action="" method="POST" style="position:absolute;top:30px;left:35px;">
+    {% csrf_token %}
+    <h3>
+Number of Tables you want:<input type="number" name='bs' style="width:70px;"></h3>
+<button type="submit" style="background-color:gray;color:white;">SUBMIT</button>
+<button type="reset" style="background-color:gray;color:white;">RESET</button>
+</form> 
+</center>
+</div>
+{% endblock %}
